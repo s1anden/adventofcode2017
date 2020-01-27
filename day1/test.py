@@ -1,4 +1,5 @@
 from adventofcode2017.day1.captcha import solveCaptchaNextDigit, solveCaptchaHalfwayRound
+from adventofcode2017.asserts import assertEquals
 
 def test():
     testNextDigit("1122", 3)
@@ -20,9 +21,3 @@ def testNextDigit(input, expected):
 def testHalfwayRound(input, expected):
     resultHalf = solveCaptchaHalfwayRound(input)
     assertEquals(expected, resultHalf)
-
-def assertEquals(expected, actual):
-    if actual != expected:
-        print("Failed test! Expected: ", expected, " but was ", actual)
-    else:
-        print("Test passed!")
